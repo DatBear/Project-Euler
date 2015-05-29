@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ProjectEuler.Problem34</StartupObject>
+    <StartupObject>ProjectEuler.Problem35</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,12 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Primes.cs" />
     <Compile Include="Problem21.cs" />
     <Compile Include="Problem23.cs" />
     <Compile Include="Problem26.cs" />
     <Compile Include="Problem31.cs" />
     <Compile Include="Problem33.cs" />
     <Compile Include="Problem34.cs" />
+    <Compile Include="Problem35.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

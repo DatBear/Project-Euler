@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 
 namespace ProjectEuler{
     public class Number{
@@ -41,6 +42,19 @@ namespace ProjectEuler{
         public static IList<int> NumberRotations(int num) {
             var digits = DigitRotations(num);
             return FromDigitsList(digits).Distinct().ToList();
+        }
+
+        public static BigInteger Reverse(BigInteger num){
+            BigInteger rev = 0;
+            while (num != 0) {
+                rev = rev * 10 + num % 10;
+                num /= 10;
+            }
+            return rev;
+        }
+
+        public static bool IsPalindrome(BigInteger num){
+            return num == Reverse(num);
         }
     }
 }

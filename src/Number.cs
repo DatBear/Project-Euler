@@ -15,6 +15,16 @@ namespace ProjectEuler{
             return digits;
         }
 
+        public static IList<int> Digits(BigInteger num) {
+            var digits = new List<int>();
+            while (num > 0) {
+                digits.Add((int)(num % 10));
+                num = num / 10;
+            }
+            digits.Reverse();
+            return digits;
+        }
+
         public static IList<int[]> DigitRotations(int num) {
             var digits = Digits(num);
             var queue = new Queue<int>(digits);

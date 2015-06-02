@@ -124,5 +124,16 @@ namespace ProjectEuler{
 
             return d;
         }
+
+        public static bool IsLychrel(int num){
+            BigInteger sum = num;
+            for (var i = 1; i <= 50; i++){
+                sum += Reverse(sum);
+                if (IsPalindrome(sum)){
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

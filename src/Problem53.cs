@@ -24,13 +24,13 @@ namespace ProjectEuler{
     public class Problem53{
         public static void Main(string[] args){
             var factorials = Factorials.First(1000);
-            Console.WriteLine(Selections(23, 10));
+            Console.WriteLine(Combinatorial.Selections(23, 10));
 
             //var overOneMillion = new List<BigInteger>();
             var over1mil = 0;
             for (var n = 2; n <= 100; n++){
                 for (var r = 1; r <= n; r++){
-                    if (Selections(n, r) > 1000000){
+                    if (Combinatorial.Selections(n, r) > 1000000){
                         //Console.WriteLine("n " + n + " r " + r);
                         over1mil++;
                     }
@@ -39,12 +39,5 @@ namespace ProjectEuler{
             Console.WriteLine("found " + over1mil);
             Console.Read();
         }
-
-        private static BigInteger[] factorials = Factorials.First(1000);
-
-        static BigInteger Selections(int n, int r) {
-            return factorials[n]/(factorials[r]*factorials[n - r]);
-        }
-
     }
 }

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ProjectEuler.Problem60</StartupObject>
+    <StartupObject>ProjectEuler.Problem61</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combinatorial.cs" />
+    <Compile Include="EnumerableUtil.cs" />
     <Compile Include="Factorials.cs" />
     <Compile Include="Number.cs" />
+    <Compile Include="PolygonalNumbers.cs" />
     <Compile Include="Primes.cs" />
     <Compile Include="Problem21.cs" />
     <Compile Include="Problem23.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="Problem55.cs" />
     <Compile Include="Problem56.cs" />
     <Compile Include="Problem60.cs" />
+    <Compile Include="Problem61.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

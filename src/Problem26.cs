@@ -17,9 +17,6 @@ namespace ProjectEuler {
                 }
             }
             Console.WriteLine("Longest num: " + longestNum + ", longest length: " + longestLength);
-            
-
-            Console.Read();
         }
 
 

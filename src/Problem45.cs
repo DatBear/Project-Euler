@@ -14,8 +14,6 @@ namespace ProjectEuler{
             foreach (var num in allThree){
                 Console.WriteLine(num);
             }
-
-            Console.Read();
         }
     }
 }

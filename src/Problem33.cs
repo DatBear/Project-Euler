@@ -13,7 +13,6 @@ namespace ProjectEuler {
     public class Problem33 {
         public static void Main(string[] args) {
             PrintFractions();
-            Console.Read();
         }
 
         private double[] simplifiedFractions = {

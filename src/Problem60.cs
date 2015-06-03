@@ -40,8 +40,6 @@ namespace ProjectEuler{
             }
 
             Console.WriteLine(found ? "found" : "not found");
-
-            Console.Read();
         }
 
         private static bool AreAllPrime(params int[] numbers){

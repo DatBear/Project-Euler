@@ -24,10 +24,6 @@ namespace ProjectEuler {
             }
 
             Console.WriteLine(SumOfNoSumOfTwo(abundantNumbers));
-
-            //Console.WriteLine(String.Join(", ", abundantNumbers));
-
-            Console.Read();
         }
 
         static int SumOfNoSumOfTwo(IEnumerable<int> pool) {

@@ -17,8 +17,6 @@ namespace ProjectEuler{
                 }
             }
             Console.WriteLine("max sum " + maxSum);
-
-            Console.Read();
         }
 
 

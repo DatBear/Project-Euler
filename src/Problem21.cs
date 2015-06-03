@@ -27,8 +27,6 @@ namespace ProjectEuler {
                 sum += IsAmicableNumber(i) ? i : 0;
             }
             Console.WriteLine(sum);
-
-            Console.Read();
         }
 
         public static int ProperDivisorsSum(int num) {

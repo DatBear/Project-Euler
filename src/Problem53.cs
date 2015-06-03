@@ -37,7 +37,6 @@ namespace ProjectEuler{
                 }
             }
             Console.WriteLine("found " + over1mil);
-            Console.Read();
         }
     }
 }

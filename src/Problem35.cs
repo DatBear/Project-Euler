@@ -29,8 +29,6 @@ namespace ProjectEuler {
             }
 
             Console.WriteLine(circularPrimes.Count + " circular primes found");
-
-            Console.Read();
         }
 
         private static IList<int> TargetPrimes = Primes.Under(1000000);

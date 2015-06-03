@@ -15,8 +15,6 @@ namespace ProjectEuler{
                 }
             }
             Console.WriteLine(lychrelNumbers);
-
-            Console.Read();
         }
     }
 }

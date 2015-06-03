@@ -43,12 +43,6 @@ namespace ProjectEuler{
                 octagonal
             };
 
-            Console.WriteLine("pentagonals");
-            for (var i = 0; i < pentagonals.Count; i++){
-                Console.WriteLine(i + " : " + String.Join(",", pentagonals[i].ToList()));
-            }
-
-
             var found = false;
             for (var i = 0; i < 1000000 && !found; i++){
                 var startList = pentagonals[validListPredicate(i)];
@@ -90,11 +84,9 @@ namespace ProjectEuler{
 
 
 
-            Console.WriteLine(AreCyclic(2, 8128, 2882, 8281));
-            Console.WriteLine(AreCyclic(2, 1234, 3456, 5611));
+            //Console.WriteLine(AreCyclic(2, 8128, 2882, 8281));
+            //Console.WriteLine(AreCyclic(2, 1234, 3456, 5611));
 
-
-            Console.Read();
         }
 
         private static List<List<long>> pentagonals;

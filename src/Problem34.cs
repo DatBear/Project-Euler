@@ -18,8 +18,6 @@ namespace ProjectEuler {
                 sum += i == SumFactorialOfDigits(i) ? i : 0;
             }
             Console.WriteLine(sum);
-
-            Console.Read();
         }
 
         private static int[] factorials = Factorials();

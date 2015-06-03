@@ -32,8 +32,6 @@ namespace ProjectEuler{
             }
 
             Console.WriteLine("# of triangles: "+ mostTriangles + ", perimeter: " + mostTrianglesPerimiter);
-
-            Console.Read();
         }
 
         static IList<Triangle> FindTriangles(int perimeter){

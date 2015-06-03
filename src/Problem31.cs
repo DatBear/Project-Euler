@@ -23,7 +23,6 @@ namespace ProjectEuler {
 
             int target = 200;
             Console.WriteLine(CountCombinations(coins, target)); //242
-            Console.ReadLine();
         }
 
         private static long CountCombinations(int[] coins, int target) {

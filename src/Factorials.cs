@@ -1,16 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 
 namespace ProjectEuler{
     public class Factorials{
-        //public static long[] First(int num){
-        //    var factorials = new long[num+1];
-        //    factorials[0] = 1;
-        //    for (long i = 1; i < factorials.Length; i++) {
-        //        factorials[i] = factorials[i-1] * i;
-        //    }
-        //    return factorials;
-        //}
+        private static BigInteger[] forDigits = First(9);
 
         public static BigInteger[] First(int num) {
             var factorials = new BigInteger[num + 1];
@@ -19,6 +14,25 @@ namespace ProjectEuler{
                 factorials[i] = factorials[i - 1] * i;
             }
             return factorials;
+        }
+
+        public static int SumOfDigitsFactorials(int num) {
+            var sum = 0;
+            while (num > 0) {
+                sum += (int)forDigits[num % 10];
+                num = num / 10;
+            }
+            return sum;
+        }
+
+        public static int[] SumOfDigitsFactorialsLoop(int num){
+            var terms = new List<int>();
+            var sum = num;
+            while (!terms.Contains(sum)){
+                terms.Add(sum);
+                sum = SumOfDigitsFactorials(sum);
+            }
+            return terms.ToArray();
         }
     }
 }

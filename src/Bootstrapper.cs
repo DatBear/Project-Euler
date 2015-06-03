@@ -7,7 +7,7 @@ namespace ProjectEuler{
         public static void Main(string[] args){
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Problem61.Main(args);
+            Problem74.Main(args);
             stopWatch.Stop();
             // Get the elapsed time as a TimeSpan value.
             TimeSpan ts = stopWatch.Elapsed;

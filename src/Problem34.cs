@@ -34,7 +34,7 @@ namespace ProjectEuler {
             return factorials;
         }
 
-        static int SumFactorialOfDigits( int num) {
+        static int SumFactorialOfDigits(int num) {
             var sum = 0;
             while (num > 0) {
                 sum += factorials[num%10];

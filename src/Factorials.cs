@@ -25,7 +25,7 @@ namespace ProjectEuler{
             return sum;
         }
 
-        public static int[] SumOfDigitsFactorialsLoop(int num){
+        public static int[] SumOfDigitsFactorialsChain(int num){
             var terms = new List<int>();
             var sum = num;
             while (!terms.Contains(sum)){

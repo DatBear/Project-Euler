@@ -5,10 +5,10 @@ using System.Numerics;
 namespace ProjectEuler{
     public class Problem74{
         public static void Main(string[] args){
-            Console.WriteLine(String.Join(",", Factorials.SumOfDigitsFactorialsLoop(69)));
+            Console.WriteLine(String.Join(",", Factorials.SumOfDigitsFactorialsChain(69)));
             var sixtyTerms = 0;
             for (var i = 0; i < 1000000; i++){
-                if (Factorials.SumOfDigitsFactorialsLoop(i).Count() == 60){
+                if (Factorials.SumOfDigitsFactorialsChain(i).Count() == 60){
                     sixtyTerms++;
                 }
             }

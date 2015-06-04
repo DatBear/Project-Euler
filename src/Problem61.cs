@@ -45,7 +45,7 @@ namespace ProjectEuler{
 
             var found = false;
             for (var i = 0; i < 1000000 && !found; i++){
-                var startList = pentagonals[validListPredicate(i)];
+                var startList = pentagonals[i%pentagonals.Count()];
                 for (var j = 0; j < startList.Count; j++){
                     var a = i+1;
                     var withNext = new List<long>{startList[j]};
@@ -82,25 +82,12 @@ namespace ProjectEuler{
                 }
             }
 
-
-
-            //Console.WriteLine(AreCyclic(2, 8128, 2882, 8281));
-            //Console.WriteLine(AreCyclic(2, 1234, 3456, 5611));
-
         }
 
         private static List<List<long>> pentagonals;
 
-        private static Func<int, int> validListPredicate =
-            (i =>{
-                while (i >= pentagonals.Count){
-                    i -= pentagonals.Count;
-                }
-                return i;
-            });
-
         private static List<long> WithNextCyclicNumber(List<long> numbers, int i){
-            var nextList = pentagonals[validListPredicate(i)];
+            var nextList = pentagonals[i%pentagonals.Count()];
             for (var j = 0; j < nextList.Count; j++){
                 if (!numbers.Contains(nextList[j])){
                     var list = new List<long>(numbers);

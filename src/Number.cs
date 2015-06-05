@@ -135,5 +135,19 @@ namespace ProjectEuler{
             }
             return true;
         }
+
+        public static bool IsAmicablePair(int num) {
+            var sum = ProperDivisorsSum(num);
+            return num == ProperDivisorsSum(sum) && num != sum;
+        }
+
+        public static int ProperDivisorsSum(int num) {
+            int sum = 1;
+            for (var i = 2; i < Math.Sqrt(num); i++) {
+                sum += num%i == 0 ? i + (i*i != num ? num/i : 0) : 0;
+                //sum += num%i == 0 ? num/i : 0;
+            }
+            return sum;
+        }
     }
 }

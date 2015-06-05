@@ -43,7 +43,7 @@ namespace ProjectEuler {
         }
 
         static bool IsAbundantNumber(int num) {
-            var sum = Problem21.ProperDivisorsSum(num);
+            var sum = Number.ProperDivisorsSum(num);
             return sum > num;
         }
     }

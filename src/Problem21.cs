@@ -16,30 +16,17 @@ namespace ProjectEuler {
      */
     public class Problem21 {
         static void Main(string[] args) {
-            var sum220 = ProperDivisorsSum(220);
-            Console.WriteLine(sum220 + ", " + IsAmicableNumber(220));
+            var sum220 = Number.ProperDivisorsSum(220);
+            Console.WriteLine(sum220 + ", " + Number.IsAmicablePair(220));
 
             int sum = 0;
             for (var i = 1; i < 10000; i++) {
-                if (IsAmicableNumber(i)) {
-                    Console.WriteLine(IsAmicableNumber(i) + ", " + i + ", " + ProperDivisorsSum(i));
+                if (Number.IsAmicablePair(i)) {
+                    Console.WriteLine(Number.IsAmicablePair(i) + ", " + i + ", " + Number.ProperDivisorsSum(i));
                 }
-                sum += IsAmicableNumber(i) ? i : 0;
+                sum += Number.IsAmicablePair(i) ? i : 0;
             }
             Console.WriteLine(sum);
-        }
-
-        public static int ProperDivisorsSum(int num) {
-            int sum = 0;
-            for (var i = 1; i < num; i++) {
-                sum += num%i == 0 ? i : 0;
-            }
-            return sum;
-        }
-
-        static bool IsAmicableNumber(int num) {
-            var sum = ProperDivisorsSum(num);
-            return num == ProperDivisorsSum(sum) && num != sum;
         }
     }
 }
